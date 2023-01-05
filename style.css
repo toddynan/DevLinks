@@ -48,8 +48,9 @@ body * {
 /* seletor do id */
 #container {
   /* border: 1px solid red; colocar borda fica mais didático, mas agora não preciso */
-  width: 360px;
+  width: 100%;
   /* margin: auto; alinha ao meio a caixa, porém só preenche as laterais, pois o css não preenche em cima e nem embaixo */
+  max-width: 588px;
   margin: 56px auto 0px; /* top laterais bottom */
 
   padding: 0 24px; /* 0 em cima e embaixo e 24 nas laterais. server para diminuir a largura dos botões */
