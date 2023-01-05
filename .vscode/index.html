@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevLinks</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="profile">
+        <img
+          src="./assets/avatar.png"
+          alt="Foto de Renan Garcia sorrindo, com barba e camisa preta em sua casa."
+        />
+        <!--alternativo é para quando não se reconhece a imagem, erro-->
+        <p>@renann_g</p>
+      </div>
+      <div id="switch" onclick="toggleMode()">
+        <!--ao clicar, executa a função toggleMode-->
+        <button></button>
+        <!--botão-->
+        <span></span>
+        <!--track-->
+      </div>
+      <ul>
+        <!--lista não ordenada. para ser ordenada usa-se ol-->
+        <li>
+          <!--elemento da lista-->
+          <a href="#">Inscrever-se no NLW</a>
+        </li>
+
+        <li>
+          <a href="#">Baixar meu e-book</a>
+        </li>
+
+        <li>
+          <a href="https://github.com/toddynan" target="_blank"
+            >Ver meu portfólio</a
+          >
+        </li>
+
+        <li>
+          <a href="https://rocketseat.com.br/explorer" target="_blank"
+            >Conheça o Explorer</a
+          >
+        </li>
+        <!--target _blank é para que o link seja aberto em outra aba-->
+      </ul>
+      <div id="social-links">
+        <a href="https://github.com/toddynan" target="_blank">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+        <a href="https://instagram.com/renann_g" target="_blank">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a
+          href="https://linkedin.com/in/renan-garcia-9467b818b"
+          target="_blank"
+        >
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+        <a href="https://youtube.com/@renangarciadasilva1885" target="_blank">
+          <ion-icon name="logo-youtube"></ion-icon>
+        </a>
+      </div>
+      <footer>
+        Powered by
+        <a href="https://rocketseat.com.br" target="_blank">Rocketseat</a>
+      </footer>
+      <!--rodapé-->
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <!--código para colocar os links-->
+    <script src="./script.js"></script>
+  </body>
+</html>

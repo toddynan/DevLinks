@@ -1,0 +1,186 @@
+/* aplica-se a todos os elementos da página. reset do css */
+* {
+  margin: 0; /* zera o margin padrão do navegador */
+  padding: 0; /* zera o padding padrão do navegador */
+  box-sizing: border-box; /* a medida de largura será feita pela borda. o padding dos elementos não vai alterar a largura das caixas */
+}
+
+/* raiz. toda página seguirá isso */
+:root {
+  --text-color: white; /* variável que carrega a cor */
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(255, 255, 255, 0.05);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --bg-img: url(./assets/moon-stars.svg);
+}
+
+.light {
+  --text-color: black; /* nessa classe o text color muda para preto */
+  --bg-url: url(./assets/bg-mobile-light.jpg); /* nessa classe o bg-url muda para o fundo branco */
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --bg-img: url(./assets/sun.svg);
+}
+
+body {
+  /*
+  background-image: url(./assets/bg-mobile.jpg); diz onde está a imagem
+  background-repeat: no-repeat; não repete a imagem no viewport
+  background-position: top center; centraliza a imagem com o ponto de interesse do eixo y sendo no topo
+  background-size: cover; cobre todo o espaço visível 
+  */
+
+  /* background: color image repeat position/size */
+
+  background: var(--bg-url) no-repeat top center/cover;
+}
+
+/* * é um seletor universal. as propriedades serão aplicadas para o body inteiro */
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+/* seletor do id */
+#container {
+  /* border: 1px solid red; colocar borda fica mais didático, mas agora não preciso */
+  width: 360px;
+  /* margin: auto; alinha ao meio a caixa, porém só preenche as laterais, pois o css não preenche em cima e nem embaixo */
+  margin: 56px auto 0px; /* top laterais bottom */
+
+  padding: 0 24px; /* 0 em cima e embaixo e 24 nas laterais. server para diminuir a largura dos botões */
+}
+
+/* profile */
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+}
+
+/* 
+img é um elemento inline. elementos inline não são alinhados pelo margin auto. ou eu alinho o elemento pai com o text align ou eu transformo o img em display block e alinho com o margin auto 
+*/
+
+/*
+elementos display block ocupam todo o espaço disponível da caixa. elementos display inline ocupam somente o espaço do elemento.
+*/
+#profile p {
+  font-weight: 500; /* intensidade de negrito */
+  line-height: 24px; /* altura de linha */
+  margin-top: 8px;
+}
+
+/* switch */
+
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto; /* switch é display block. 4px em cima e embaixo. auto nas laterais */
+}
+#switch button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: white var(--bg-img) no-repeat center;
+  border: none;
+
+  position: absolute; /*sobreposição de camadas. este será relativo ao elemento switch. isso serve para que o botão se limite ao switch e não passeie pela página toda */
+  left: 0; /*coloca o elemento à esquerda */
+  z-index: 1; /* andar (analogia dos andares do prédio)/camada (layer) 1 */
+
+  top: 50%; /* alinha 50% a partir do topo do switch */
+  transform: translateY(-50%); /* move 50% para cima do switch no eixo y */
+}
+
+.light #switch button {
+  right: 0;
+  left: initial; /* o left volta para sua maneira inicial */
+}
+
+#switch span {
+  display: block; /* span por padrão é display inline */
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border-radius: 9999px;
+  border: 1px var(--stroke-color) solid;
+  backdrop-filter: blur(4px);
+}
+
+/* links - lista */
+ul {
+  list-style: none; /* tira os marcadores de lista */
+  display: flex; /* coloca todos os elementos da caixa em linha de maneira flexível */
+  flex-direction: column; /* coloca os elementos um abaixo do outro */
+  gap: 16px; /* espaço entre os elementos */
+
+  padding: 24px 0;
+}
+
+/* li é um elemento block. a é um elemento display inline */
+ul li a {
+  display: flex;
+  align-items: center; /* alinha o elemento ao meio referente à linha horizontal */
+  justify-content: center; /* alinha o elemento ao meio referente à linta vertical */
+
+  padding: 16px 24px;
+
+  background: var(
+    --surface-color
+  ); /* red, green, blue, alpha. o alpha é a transparência. 255 em tudo é branco absoluto. */
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px; /* arredondamento de borda */
+
+  backdrop-filter: blur(
+    4px
+  ); /* efeito de embaçamento. alguns browsers precisam de um prefix p rodar direito esta propriedade, como o Safari 9, que precisa do -webkit-. o Chrome não precisa. */
+
+  text-decoration: none; /* tira a linha de baixo do texto. overline acima, underline abaixo, line-through ao meio */
+  font-weight: 500;
+
+  transition: background 0.2s; /* transiciona o background em 0,2 s. dá um caráter mais suave ao hover */
+}
+
+/* pseudo-selector - aplico propriedades para quando o mouse estiver em cima */
+ul li a:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+/* social-links */
+
+#social-links {
+  display: flex;
+  padding: 24px 0;
+  font-size: 24px;
+  justify-content: center;
+}
+
+/* alinhar os ícones ao meio */
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 50%; /* bolinha perfeita */
+
+  transition: background 0.2s;
+}
+
+#social-links a:hover {
+  background: var(--highlight-color);
+}
+
+footer {
+  padding: 24px 0;
+  font-size: 14px;
+  text-align: center;
+}
