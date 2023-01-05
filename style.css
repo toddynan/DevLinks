@@ -37,6 +37,7 @@ body {
   /* background: color image repeat position/size */
 
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh; /* a altura será 100% da viewport. para que abarque todos os tipos de dispositivos */
 }
 
 /* * é um seletor universal. as propriedades serão aplicadas para o body inteiro */
