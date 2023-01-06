@@ -100,11 +100,17 @@ elementos display block ocupam todo o espaço disponível da caixa. elementos di
 
   top: 50%; /* alinha 50% a partir do topo do switch */
   transform: translateY(-50%); /* move 50% para cima do switch no eixo y */
+  animation: slide-back 0.2s; /*não preciso colocar o forwards. a propriedade final já é left:0 */
 }
 
 .light #switch button {
-  right: 0;
-  left: initial; /* o left volta para sua maneira inicial */
+  animation: slide-in 0.2s forwards; /* faz o slide-in em 0,2 s e mantém a propriedade final da animação que é left 50% (forwards) */
+  /* right: 0;
+  left: initial; o left volta para sua maneira inicial */
+}
+
+#switch button:hover {
+  outline: 8px var(--highlight-color) solid;
 }
 
 #switch span {
@@ -199,5 +205,25 @@ footer {
 
   .light {
     --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+/* animações definidas pela @rule @keyframes */
+/* fazer o slide-in do botão de left:0 até left: 50%, que é o outro lado do track */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
