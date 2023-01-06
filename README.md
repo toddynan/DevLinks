@@ -34,7 +34,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O MyLinks é um agregador de links para usar como cartão de visitas online.
 
-Você pode ter acesso ao projeto online [clicando aqui](https://toddynan.github.io/DevLinks).
+Você pode ter acesso ao projeto online [clicando aqui](https://toddynan.github.io/MyLinks).
 
 ## 🔖 Layout
 
