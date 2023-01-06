@@ -1,4 +1,4 @@
-<h1 align="center"> DevLinks </h1>
+<h1 align="center"> MyLinks </h1>
 
 <p align="center">
 Página criada com a ajuda do Mayk Brito da Rocketseat para abarcar alguns links importantes sobre mim.
