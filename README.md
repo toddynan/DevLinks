@@ -1,7 +1,7 @@
 <h1 align="center"> MyLinks </h1>
 
 <p align="center">
-Página criada com a ajuda do Mayk Brito da Rocketseat para abarcar alguns links importantes sobre mim.
+Página criada para abarcar alguns links importantes sobre mim.
 </p>
 
 <p align="center">
@@ -18,7 +18,7 @@ Página criada com a ajuda do Mayk Brito da Rocketseat para abarcar alguns links
 <br>
 
 <p align="center">
-  <img alt="projeto DevLinks" src=".github/preview.jpg" width="100%">
+  <img alt="projeto DevLinks" src="./github/preview.jpg" width="100%">
 </p>
 
 ## 🚀 Tecnologias
