@@ -18,7 +18,7 @@ Página criada para abarcar alguns links importantes sobre mim.
 <br>
 
 <p align="center">
-  <img alt="projeto MyLinks" src="./.github/preview.jpg" width="100%">
+  <img alt="projeto MyLinks" src="./preview.jpg" width="100%">
 </p>
 
 ## 🚀 Tecnologias
